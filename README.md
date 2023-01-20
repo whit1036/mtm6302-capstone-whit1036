@@ -1,3 +1,3 @@
 # Capstone Project - whit1036
-- **Brennan Whitworth**
-- **040992246**
+- Full Name:**Brennan Whitworth**
+- Student Number**040992246**

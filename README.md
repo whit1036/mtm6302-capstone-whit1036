@@ -1,1 +1,3 @@
-# mtm6302-capstone-whit1036
+# Capstone Project - whit1036
+> Brennan Whitworth
+> 040992246

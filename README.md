@@ -1,1 +1,1 @@
-# mtm6302-capstone-whit1036
+# Capstone Project - Part 2

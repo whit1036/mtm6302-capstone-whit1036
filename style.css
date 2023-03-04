@@ -2,6 +2,10 @@ body {
     background-color: black;
 }
 
+.bi-heart {
+    font-size: 2rem;
+}
+
 
 
 /** media query styles for mobile **

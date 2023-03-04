@@ -1,10 +1,13 @@
+body {
+    background-color: black;
+}
 
-/** media query styles for mobile **/
+
+
+/** media query styles for mobile **
 @media screen and (max-width: 600px) {
     body {
-        background-image: url(images/galaxy.jpg);
-        background-position: 50%;
-        width: 100%;
+        background-image: url(images/galaxy-mobile.jpg);
         background-repeat: repeat;
     }
 }

@@ -26,9 +26,19 @@ button, input {
 
 /** media query styles for mobile **/
 @media screen and (max-width: 600px) {
-    .jumbotron {
+    .apod-search-bg {
         height: 80vh;
         background-image: url(images/galaxy-mobile.jpg);
         background-size: cover;
+    }
+
+    .generated-content-bg {
+        background-image: url(images/galaxy-mobile.jpg);
+        background-size: cover contain;
+        background-repeat: no-repeat;
+    }
+
+    .apod-container {
+        padding-top: 17rem;
     }
 }

@@ -5,7 +5,7 @@ body {
     margin-right: auto;
 }
 
-.bi-heart {
+.bi-heart, .bi-house-door {
     font-size: 2rem;
 }
 
@@ -25,7 +25,7 @@ button, input {
 }
 
 /** media query styles for mobile **/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
     p {
         font-size: small;
     }
@@ -51,5 +51,9 @@ button, input {
         background-image: url(images/galaxy-mobile.jpg);
         background-size: cover;
         background-repeat: no-repeat;
+    }
+
+    .favourites-container {
+        padding-top: 5rem;
     }
 }

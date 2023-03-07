@@ -26,10 +26,18 @@ button, input {
 
 /** media query styles for mobile **/
 @media screen and (max-width: 600px) {
+    p {
+        font-size: small;
+    }
+    
     .apod-search-bg {
         height: 80vh;
         background-image: url(images/galaxy-mobile.jpg);
         background-size: cover;
+    }
+
+    .apod-container {
+        padding-top: 17rem;
     }
 
     .generated-content-bg {
@@ -38,7 +46,10 @@ button, input {
         background-repeat: no-repeat;
     }
 
-    .apod-container {
-        padding-top: 17rem;
+    .user-favourites-bg {
+        height: 80vh;
+        background-image: url(images/galaxy-mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }

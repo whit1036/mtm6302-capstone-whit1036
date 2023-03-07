@@ -1,5 +1,8 @@
 body {
     background-color: black;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .bi-heart {

@@ -1,5 +1,8 @@
 body {
     background-color: black;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .bi-heart, .bi-arrow-left {
@@ -67,5 +70,21 @@ button, input {
 
     .favourites-container {
         padding-top: 10.5rem;
+    }
+}
+
+/** media query styles for desktop **/
+@media screen and (min-width: 768px) {
+    .apod-search-bg {
+        height: 80vh;
+        background-image: url(images/galaxy.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .apod-container {
+        padding-top: 17rem;
+        width: 600px;
+        margin: auto;
     }
 }

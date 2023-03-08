@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    max-width: 1800px;
+    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -52,7 +52,10 @@ button, input {
     }
 
     .apod-container {
-        padding-top: 22rem;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .generated-content-bg {
@@ -84,8 +87,10 @@ button, input {
     }
 
     .apod-container {
-        padding-top: 25rem;
         width: 600px;
-        margin: auto;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }

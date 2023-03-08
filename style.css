@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    max-width: 1600px;
+    max-width: 1800px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -46,16 +46,17 @@ button, input {
     }
     
     .apod-search-bg {
-        height: 80vh;
+        height: 100vh;
         background-image: url(images/galaxy-mobile.jpg);
         background-size: cover;
     }
 
     .apod-container {
-        padding-top: 17rem;
+        padding-top: 22rem;
     }
 
     .generated-content-bg {
+        height: 100vh;
         background-image: url(images/galaxy-mobile.jpg);
         background-size: cover contain;
         background-repeat: no-repeat;
@@ -76,14 +77,14 @@ button, input {
 /** media query styles for desktop **/
 @media screen and (min-width: 768px) {
     .apod-search-bg {
-        height: 80vh;
+        height: 100vh;
         background-image: url(images/galaxy.jpg);
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .apod-container {
-        padding-top: 17rem;
+        padding-top: 25rem;
         width: 600px;
         margin: auto;
     }

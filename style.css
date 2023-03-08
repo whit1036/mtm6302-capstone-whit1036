@@ -1,12 +1,13 @@
 body {
     background-color: black;
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.bi-heart, .bi-house-door {
+.bi-heart, .bi-arrow-left {
     font-size: 2rem;
+}
+
+.bi-house-door {
+    font-size: 3.5rem;
 }
 
 h1, h3 {
@@ -14,7 +15,18 @@ h1, h3 {
     font-weight: 600;
 }
 
-p, h5 {
+h5 {
+    font-family: 'Trispace', sans-serif;
+    font-weight: 600;
+    text-shadow: 4px 4px 4px rgba(0,0,0,.8);
+}
+
+i {
+    text-shadow: 4px 4px 4px rgba(0,0,0,.8);
+    font-size: 3rem;
+}
+
+p {
     font-family: 'Trispace', sans-serif;
     font-weight: 600;
 }
@@ -47,13 +59,13 @@ button, input {
     }
 
     .user-favourites-bg {
-        height: 80vh;
+        height: 100vh;
         background-image: url(images/galaxy-mobile.jpg);
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .favourites-container {
-        padding-top: 5rem;
+        padding-top: 10.5rem;
     }
 }

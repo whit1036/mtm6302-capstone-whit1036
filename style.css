@@ -13,7 +13,7 @@ body {
     font-size: 3.5rem;
 }
 
-h1, h3 {
+h1, h4 {
     font-family: 'Trispace', sans-serif;
     font-weight: 600;
 }
@@ -61,8 +61,7 @@ button, input {
     .generated-content-bg {
         height: 100%;
         background-image: url(images/galaxy-mobile.jpg);
-        background-size: cover contain;
-        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .user-favourites-bg {
@@ -92,5 +91,17 @@ button, input {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    .generated-content-bg {
+        height: 100%;
+        background-image: url(images/galaxy.jpg);
+        background-size: cover;
+    }
+
+    .user-favourites-bg {
+        height: 100%;
+        background-image: url(images/galaxy.jpg);
+        background-size: cover;
     }
 }

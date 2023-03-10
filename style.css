@@ -26,7 +26,7 @@ h5 {
 
 i {
     text-shadow: 4px 4px 4px rgba(0,0,0,.8);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 p {
@@ -59,14 +59,14 @@ button, input {
     }
 
     .generated-content-bg {
-        height: 100vh;
+        height: 100%;
         background-image: url(images/galaxy-mobile.jpg);
         background-size: cover contain;
         background-repeat: no-repeat;
     }
 
     .user-favourites-bg {
-        height: 100vh;
+        height: 100%;
         background-image: url(images/galaxy-mobile.jpg);
         background-size: cover;
         background-repeat: no-repeat;

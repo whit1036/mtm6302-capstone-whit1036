@@ -40,7 +40,7 @@ button, input {
 }
 
 /** media query styles for mobile **/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
     p {
         font-size: small;
     }
@@ -103,5 +103,10 @@ button, input {
         height: 100%;
         background-image: url(images/galaxy.jpg);
         background-size: cover;
+    }
+
+    .favourites-container {
+        width: 800px;
+        margin: auto;
     }
 }

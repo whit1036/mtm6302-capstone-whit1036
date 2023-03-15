@@ -8,11 +8,11 @@ Coding a perfect version of the mockup was very tricky for me to complete. Altho
 
 Re-creating the high-quality image preview that displays to the users when they click on the generated image was a challenge to re-create. I used Bootstraps modal to create this result, however, it does not look like the one created in my mockup. I tried using various resources to overcome this issue, but the final result still works well with the user workflow to complete the task to achieve the result.
 
-In conclusion, I think that if time permitted, I could come back at fix some of the viewport heights, container widths, and various other elements to create a nearly identical prototype. I belive this design can still perform well for the final version when I add the JS, and it contains all of the content needed for the user to get their desired results, and experience with the application. All in all, I enjoyed the design process, and if I have time I can attempt to improve upon the various unresolved changes.
+In conclusion, I think that if time permitted, I could come back at fix some of the viewport heights, container widths, and various other elements to create a nearly identical prototype. I belive this design can still perform well for the final version when I add the JS, and it contains all of the content needed for the user to get their desired results, and experience with the application including various aria roles, schema, and accessibility features for screen readers, and users with other accessible needs. All in all, I enjoyed the design process, and if I have time I can attempt to improve upon the various unresolved changes for the final version.
 
-You can find my list of resouces & references used to complete this assignment below:
+You can find a list of resouces & references I used to complete this assignment below:
 
-## References:
+## References/Resources:
 * [Bootstrap Manual](https://getbootstrap.com/)
 * [Bootstrap Icons](https://icons.getbootstrap.com/)
 * [Google Fonts](fonts.google.com)
@@ -20,3 +20,9 @@ You can find my list of resouces & references used to complete this assignment b
 * [Button Font/Weight not working fix](https://wordpress.org/support/topic/useful-tips-check-it-out/)
 * [Media Queries](https://www.w3schools.com/css/css_rwd_mediaqueries.asp)
 * [Background Position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
+* [ARIA in HTML - W3](https://www.w3.org/TR/html-aria/)
+* [Schema](https://schema.org/)
+* [WAVE](https://wave.webaim.org/)
+* [Sim Daltonism](https://michelf.ca/projects/sim-daltonism/)
+* [HTML Validator - W3](https://validator.w3.org/)
+* [CSS Validator - W3](https://jigsaw.w3.org/css-validator/)

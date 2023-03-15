@@ -23,78 +23,88 @@
         <!--APOD Search Jumbotron-->
         <section class="p-4 h-100 border border-2 border-light rounded-3">
           <div class="apod-container">
-             <!--'Your Favourites' Button-->
-          <div class="container p-3 text-center">
-            <a href="#favourites"><button type="button" class="btn btn-dark border border-2 border-success rounded-4 w-75 p-2 fs-4">Your Favourites</button></a>
-        </div>
-        <!--Name, Date, Generate-->
-        <div>
-            <div class="container-sm w-100 bg-dark border border-3 border-success rounded-4 p-4">
-              <h1 class="text-light text-center pb-3">APOD Search</h5>
-              <h3 class="text-light text">Name:<input type="name" class="form-control form-control-color form-control-sm w-75 border border-2 border-success rounded-3 d-inline-block" id="exampleFormControlInput1" placeholder="Your Name"></h3>
-              <h3 class="text-light">Date:<input type="date" class="form-control form-control-color form-control-sm w-75 border border-2 border-success rounded-3 d-inline-block" id="exampleFormControlInput1" placeholder="YYYY-MM-DD"></h3>
-              <div class="text-center pt-3">
-                <a href="#generate"><button type="button" class="btn btn-dark border border-2 border-success rounded-3 w-75 p-1 fs-4">Generate!</button></a>
+            
+            <!--'Your Favourites' Button-->
+            <div class="container p-3 text-center">
+              <a href="#favourites">
+                <span id="favs-button-color" class="btn text-light border border-2 border-success rounded-4 w-75 p-2 fs-4">Your Favourites</span>
+              </a>
+            </div>
+            
+            <!--Name, Date, Generate-->
+            <div>
+              <div id="search-container-color" class="container-sm w-100 border border-3 border-success rounded-4 p-4">
+                <h1 class="text-light text-center pb-3">APOD Search</h1>
+                <h3 class="text-light">Name:<input type="text" class="form-control form-control-color form-control-sm w-75 border border-2 border-success rounded-3 d-inline-block m-2" id="exampleFormControlInput1"></h3>
+                <h3 class="text-light">Date:<input type="date" class="form-control form-control-color form-control-sm w-75 border border-2 border-success rounded-3 d-inline-block m-2" id="exampleFormControlInput2"></h3>
+                  <!--Generate Button-->
+                  <div class="text-center pt-3">
+                    <a href="#generate">
+                      <span id="generate-button-color" class="btn btn-dark border border-2 border-success rounded-3 w-75 p-1 fs-4">Generate!</span>
+                    </a>
+                  </div>
               </div>
             </div>
-        </div>
           </div>
-      </section>
+        </section>
       </div>
         
        <div class="generated-content-bg">
          <!--APOD Search Generated Content-->
          <section class="p-4 h-100 border border-2 border-light rounded-3">
-          <!--Name, Date & Explanation-->
-          <div id="generate" class="">
-            <div class="container w-75 h-auto bg-dark border border-3 border-success rounded-4 p-4">
-              <h4 class="text-light fs-4">Name: Titan Seas Reflect Sunlight</h4>
-              <h4 class="text-light fs-4">Date: 2022-03-27</h4>
-              <h4 class="text-light fs-4">Explanation:</h4>
-              <p class="text-light lh-sm">"Why would the surface of Titan light up with a blinding flash? The reason: a sunglint from liquid seas. Saturn's moon Titan has numerous smooth lakes of methane that, when the angle is right, reflect sunlight as if they were mirrors. Pictured here in false-color, the robotic Cassini spacecraft that orbited Saturn from 2004 to 2017 imaged the cloud-covered Titan in 2014 in different bands of cloud-piercing infrared light. This specular reflection was so bright it saturated one of Cassini's infrared cameras. Although the sunglint was annoying -- it was also useful. The reflecting regions confirm that northern Titan houses a wide and complex array of seas with a geometry that indicates periods of significant evaporation. During its numerous passes of our Solar System's most mysterious moon, Cassini has revealed Titan to be a world with active weather -- including times when it rains a liquefied version of natural gas."</p>
+          <div id="content" class="row">
+            <!--Name, Date & Explanation-->
+            <div id="generate" class="col-xl-6">
+              <div id="generated-content-color" class="container border border-3 border-success rounded-4 p-4">
+                <h4 class="text-light fs-4">Name: Titan Seas Reflect Sunlight</h4>
+                <h4 class="text-light fs-4">Date: 2022-03-27</h4>
+                <h4 class="text-light fs-4">Explanation:</h4>
+                <p class="text-light lh-lg">"Why would the surface of Titan light up with a blinding flash? The reason: a sunglint from liquid seas. Saturn's moon Titan has numerous smooth lakes of methane that, when the angle is right, reflect sunlight as if they were mirrors. Pictured here in false-color, the robotic Cassini spacecraft that orbited Saturn from 2004 to 2017 imaged the cloud-covered Titan in 2014 in different bands of cloud-piercing infrared light. This specular reflection was so bright it saturated one of Cassini's infrared cameras. Although the sunglint was annoying -- it was also useful. The reflecting regions confirm that northern Titan houses a wide and complex array of seas with a geometry that indicates periods of significant evaporation. During its numerous passes of our Solar System's most mysterious moon, Cassini has revealed Titan to be a world with active weather -- including times when it rains a liquefied version of natural gas."</p>
+              </div>
             </div>
-          </div>
-          <!--Generated Image Container-->
-          <div class="p-2">
-            <div class="container w-75 bg-dark border border-3 border-success rounded-4 p-1">
-              <div class="position-relative">
-                <button type="button" class="btn text-light border border-3 border-success position-absolute bottom-1 end-1 m-2"><i class="bi bi-heart"></i></button>
-              </div>
-              <div class="text-center">
-                <!--Link Trigger for Modal-->
-                <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="images/titan-glint-960x960.jpeg" class="img-fluid w-75" alt="generated image"></a>
-              </div>
-                <!-- Modal for displaying large version of image -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-fullscreen">
-                    <div class="modal-content">
-                      <div class="modal-header bg-dark">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body bg-dark">
-                        <div class="position-relative">
-                          <img src="images/titan-glint.jpeg" class="w-75" alt="generated image">
-                          <h3 class="text-light m-2">Titan Seas Reflect Sunlight</h3>
+            <!--Generated Image Container-->
+            <div class="p-2 col-xl-6">
+              <div id="image-preview-color" class="container border border-3 border-success rounded-4 p-1">
+                <div class="position-relative">
+                  <a href="#favs">
+                    <span class="btn text-light border border-3 border-success position-absolute bottom-1 end-1 m-2"><i class="bi bi-heart"></i></span>
+                  </a>
+                </div>
+                <div class="text-center">
+                  <!--Link Trigger for Modal-->
+                  <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="images/titan-glint-960x960.jpeg" class="w-75" alt="generated image"></a>
+                </div>
+                  <!-- Modal for displaying large version of image -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="modal-body-color" class="modal-body">
+                            <img src="images/titan-glint.jpeg" class="w-100" alt="generated image">
+                            <h3 class="text-light m-2 text-center">Titan Seas Reflect Sunlight</h3>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+              </div>
             </div>
           </div>
         </section>
        </div>
 
-        <!--User Favourites-->
-        <div class="user-favourites-bg">
+      <!--User Favourites-->
+      <div id="favs" class="user-favourites-bg">
         <section class="p-4 h-100 border border-2 border-light rounded-3">
-          <div id="favourites" class="favourites-container">
-            <div class="container w-100 bg-dark border border-3 border-success rounded-4 p-4">
+          <div id="favourites"></div>
+          <div class="favourites-container">
+            <div id="favourites-color" class="container w-100 border border-3 border-success rounded-4 p-4">
               <div class="container p-3 text-center">
-                <button type="button" class="btn btn-dark border border-2 border-success rounded-4 w-75 p-2 fs-4">Favourites</button>
+                <button type="button" class="btn text-light border border-2 border-success rounded-4 w-75 p-2 fs-4">Favourites</button>
               </div>
               <div class="p-2">
-                <div class="container w-100 p-1 bg-dark border border-3 border-success rounded-4">
+                <div id="favs-img-color" class="container w-100 p-1 border border-3 border-success rounded-4">
                   <img src="images/titan-glint.jpeg" class="img-fluid" alt="generated image">
                   <h3 class="text-light text-center fs-4 m-3">Titan Seas Reflect Sunlight</h3>
                 </div>
@@ -107,18 +117,20 @@
               </div>
             </div>
           </div>
-          <!--Home Button/Back-to-top-->
-        <div class="container text-center">
-          <div class="">
-            <a href="#top"><button type="button" class="btn text-light"><i class="bi bi-house-door"></i></button></a>
-          </div>
-           <!--Footer Info-->
-          <footer class="">
-            <h5 class="text-light text-center">APOD Search</h5>
-            <h5 class="text-light text-center">&copy; Brennan Whitworth 2023</h5>
-          </footer>
-        </div>
-        </section>
+            <!--Home Button/Back-to-top-->
+            <div class="container text-center">
+              <div class="">
+                <a href="#top">
+                  <span class="btn text-light"><i class="bi bi-house-door"></i></span>
+                </a>
+              </div>
+              <!--Footer Info-->
+              <footer>
+                <h5 class="text-light text-center">APOD Search</h5>
+                <h5 class="text-light text-center">&copy; Brennan Whitworth 2023</h5>
+              </footer>
+            </div>
+          </section>
         </div>
     </main>
 

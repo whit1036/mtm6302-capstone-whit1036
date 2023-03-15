@@ -34,9 +34,14 @@ p {
     font-weight: 600;
 }
 
-button, input {
+button, input, span {
     font-family: 'Trispace', sans-serif !important;
     font-weight: 600 !important;
+}
+
+/** sets colors for each container **/
+#favs-button-color, #search-container-color, #generate-button-color, #generated-content-color, #image-preview-color, #modal-body-color, #favourites-color, #favs-img-color {
+    background-color: black;
 }
 
 /** media query styles for mobile **/
@@ -65,7 +70,7 @@ button, input {
     }
 
     .user-favourites-bg {
-        height: 100%;
+        height: 100vh;
         background-image: url(images/galaxy-mobile.jpg);
         background-size: cover;
         background-repeat: no-repeat;
@@ -100,13 +105,14 @@ button, input {
     }
 
     .user-favourites-bg {
-        height: 100%;
+        height: 100vh;
         background-image: url(images/galaxy.jpg);
         background-size: cover;
     }
 
     .favourites-container {
-        width: 800px;
+        width: 750px;
         margin: auto;
+        padding-top: 2rem;
     }
 }

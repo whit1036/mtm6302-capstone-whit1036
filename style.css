@@ -1,3 +1,4 @@
+/** sets a max-width for all content, centers to middle of screen **/
 body {
     background-color: black;
     max-width: 1600px;
@@ -5,6 +6,7 @@ body {
     margin-right: auto;
 }
 
+/** adjusts icon sizes **/
 .bi-heart, .bi-arrow-left {
     font-size: 2rem;
 }
@@ -13,6 +15,7 @@ body {
     font-size: 3.5rem;
 }
 
+/** sets master font, weight for various elements **/
 h1, h3 {
     font-family: 'Trispace', sans-serif;
     font-weight: 600;
@@ -46,16 +49,19 @@ button, input, span, h2, h3 {
 
 /** media query styles for mobile **/
 @media screen and (max-width: 768px) {
+    /** sets description font size for mobile **/
     p {
         font-size: small;
     }
     
+    /** adds a viewport height and bg-image to the mobile homescreen of the app **/
     .apod-search-bg {
         height: 100vh;
         background-image: url(images/galaxy-mobile.jpg);
         background-size: cover;
     }
 
+    /** centers APOD Search Container to the middle of the screen **/
     .apod-container {
         position: relative;
         top: 50%;
@@ -63,12 +69,14 @@ button, input, span, h2, h3 {
         transform: translate(-50%, -50%);
     }
 
+    /** adds a height and background image to the generated content section **/
     .generated-content-bg {
         height: 100%;
         background-image: url(images/galaxy-mobile.jpg);
         background-size: cover;
     }
 
+    /** adds a height and background image to the user favourites section **/
     .user-favourites-bg {
         height: 100%;
         background-image: url(images/galaxy-mobile.jpg);
@@ -76,6 +84,7 @@ button, input, span, h2, h3 {
         background-repeat: no-repeat;
     }
 
+    /** adds padding to favourites container to fit in mobile view **/
     .favourites-container {
         padding-top: 10.5rem;
     }
@@ -83,6 +92,7 @@ button, input, span, h2, h3 {
 
 /** media query styles for desktop **/
 @media screen and (min-width: 768px) {
+    /** adds a viewport height and bg-image to the desktop homescreen of the app **/
     .apod-search-bg {
         height: 100vh;
         background-image: url(images/galaxy.jpg);
@@ -90,6 +100,7 @@ button, input, span, h2, h3 {
         background-repeat: no-repeat;
     }
 
+    /** centers APOD Search Container to the middle of the screen **/
     .apod-container {
         width: 600px;
         position: relative;
@@ -98,18 +109,21 @@ button, input, span, h2, h3 {
         transform: translate(-50%, -50%);
     }
 
+    /** adds a height and background image to the generated content section **/
     .generated-content-bg {
         height: 100%;
         background-image: url(images/galaxy.jpg);
         background-size: cover;
     }
 
+    /** adds a height and background image to the user favourites section **/
     .user-favourites-bg {
         height: 100vh;
         background-image: url(images/galaxy.jpg);
         background-size: cover;
     }
 
+    /** sets master width for desktop container, adds padding to fit screen **/
     .favourites-container {
         width: 750px;
         margin: auto;

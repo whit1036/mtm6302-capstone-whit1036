@@ -34,7 +34,7 @@ p {
     font-weight: 600;
 }
 
-button, input, span, h2 {
+button, input, span, h2, h3 {
     font-family: 'Trispace', sans-serif !important;
     font-weight: 600 !important;
 }

@@ -41,7 +41,8 @@
                 <h1 role="heading" class="text-light text-center pb-3">APOD Search</h1>
                 <h2 role="heading" class="text-light">Name:<input type="text" id="form-1-color" class="text-light form-control form-control-color form-control-sm w-75 border border-2 border-success rounded-3 d-inline-block m-2" aria-label="Enter Your Name"></h2>
                 <h2 role="heading" class="text-light">Date:<input type="date" id="form-2-color" class="text-light form-control form-control-color form-control-sm w-75 border border-2 border-success rounded-3 d-inline-block m-2" aria-label="Enter a Date"></h2>
-                  <!--Generate Button-->
+                  
+                <!--Generate Button-->
                   <div class="text-center pt-3">
                     <a href="#generate">
                       <span id="generate-button-color" class="btn btn-dark border border-2 border-success rounded-3 w-75 p-1 fs-4" aria-label="Click to generate content">Generate!</span>
@@ -57,6 +58,7 @@
          <!--APOD Search Generated Content-->
          <section class="p-4 h-100 border border-2 border-light rounded-3">
           <div role="region" class="row">
+            
             <!--Name, Date & Explanation-->
             <div id="generate" class="col-xl-6">
               <div itemscope itemtype ="https://schema.org/Action" id="generated-content-color" class="container border border-3 border-success rounded-4 p-4">
@@ -66,6 +68,7 @@
                 <p class="text-light lh-lg">"Why would the surface of Titan light up with a blinding flash? The reason: a sunglint from liquid seas. Saturn's moon Titan has numerous smooth lakes of methane that, when the angle is right, reflect sunlight as if they were mirrors. Pictured here in false-color, the robotic Cassini spacecraft that orbited Saturn from 2004 to 2017 imaged the cloud-covered Titan in 2014 in different bands of cloud-piercing infrared light. This specular reflection was so bright it saturated one of Cassini's infrared cameras. Although the sunglint was annoying -- it was also useful. The reflecting regions confirm that northern Titan houses a wide and complex array of seas with a geometry that indicates periods of significant evaporation. During its numerous passes of our Solar System's most mysterious moon, Cassini has revealed Titan to be a world with active weather -- including times when it rains a liquefied version of natural gas."</p>
               </div>
             </div>
+            
             <!--Generated Image Container-->
             <div role="region" class="p-2 col-xl-6">
               <div id="image-preview-color" class="container border border-3 border-success rounded-4 p-1">
@@ -74,10 +77,12 @@
                     <span class="btn text-light border border-3 border-success position-absolute bottom-1 end-1 m-2"><i class="bi bi-heart"></i></span>
                   </a>
                 </div>
+                
                 <div class="text-center">
                   <!--Link Trigger for Modal-->
                   <a href="" aria-label="Click to view high quality image/video" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="images/titan-glint-960x960.jpeg" class="w-75" alt="Small Generated Image/Video"></a>
                 </div>
+                  
                   <!-- Modal for displaying large version of image -->
                   <div role="complementary" class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-lg-down">
@@ -106,12 +111,14 @@
               <div class="container p-3 text-center">
                 <button type="button" class="btn text-light border border-2 border-success rounded-4 w-75 p-2 fs-4">Favourites</button>
               </div>
+              
               <!--Images/Videos saved to User Favourites-->
               <div class="p-2">
                 <div id="favs-img-color" class="container w-100 p-1 border border-3 border-success rounded-4">
                   <img src="images/titan-glint.jpeg" class="img-fluid" alt="Collection of your favourite Images/Videos">
                   <h3 role="heading" class="text-light text-center fs-4 m-3">Titan Seas Reflect Sunlight</h3>
                 </div>
+                
                 <!--Arrows-->
                 <div class="text-center m-2">
                   <button aria-label="Click to go left" type="button" class="btn text-light fs-1"><i class="bi bi-arrow-left-circle"></i></button>
@@ -135,6 +142,7 @@
                 <h4 class="text-light text-center">APOD Search</h4>
                 <h4 class="text-light text-center">&copy; Brennan Whitworth 2023</h4>
               </footer>
+
             </div>
           </section>
         </div>

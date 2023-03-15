@@ -1,6 +1,8 @@
 # Capstone Project - Part 3
 ## Prototype Challenges:
-During the creation of this prototype, I ran into various roadblocks and challenges while coding. One of the main challenges I faced was trying fit all of the content for each section in a viewport height of 100vh for all device sizes, while maintaining responsiveness and not having the content extend past the viewport height. To fix this issue, I had to set the height of some elements such as the background and borders to be 100% width instead to fit all of the content.
+During the creation of this prototype, I ran into various roadblocks and challenges while coding. One of the main challenges I faced was trying fit all of the content for each section in a viewport height of 100vh for all device sizes, while maintaining responsiveness and not having the content extend past the viewport height. To fix this issue, I had to set the height of some elements such as the background and borders to be 100% width instead to fit all of the content. Although this worked, I'm still not completely satisfied with the result, and would like to improve upon it if given the chance.
+
+Test
 
 
 ## References:

@@ -13,12 +13,12 @@ body {
     font-size: 3.5rem;
 }
 
-h1, h4 {
+h1, h3 {
     font-family: 'Trispace', sans-serif;
     font-weight: 600;
 }
 
-h5 {
+h4 {
     font-family: 'Trispace', sans-serif;
     font-weight: 600;
     text-shadow: 4px 4px 4px rgba(0,0,0,.8);
@@ -34,7 +34,7 @@ p {
     font-weight: 600;
 }
 
-button, input, span, h3 {
+button, input, span, h2 {
     font-family: 'Trispace', sans-serif !important;
     font-weight: 600 !important;
 }

@@ -17,30 +17,34 @@
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <main>
+
+    <!--Bootstrap Accessibility Skip Links-->
+    <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
+
+    <main id="content" role="main">
       
       <div class="apod-search-bg">
         <!--APOD Search Jumbotron-->
         <section class="p-4 h-100 border border-2 border-light rounded-3">
-          <div class="apod-container">
+          <div role="banner" class="apod-container">
             
             <!--'Your Favourites' Button-->
             <div class="container p-3 text-center">
               <a href="#favourites">
-                <span id="favs-button-color" class="btn text-light border border-2 border-success rounded-4 w-75 p-2 fs-4">Your Favourites</span>
+                <span id="favs-button-color" class="btn text-light border border-2 border-success rounded-4 w-75 p-2 fs-4" aria-label="Click to view your favourites">Your Favourites</span>
               </a>
             </div>
             
             <!--Name, Date, Generate-->
             <div>
               <div id="search-container-color" class="container-sm w-100 border border-3 border-success rounded-4 p-4">
-                <h1 class="text-light text-center pb-3">APOD Search</h1>
-                <h3 class="text-light">Name:<input type="text" id="form-1-color" class="text-light form-control form-control-color form-control-sm w-75 border border-2 border-success rounded-3 d-inline-block m-2" id="exampleFormControlInput1"></h3>
-                <h3 class="text-light">Date:<input type="date" id="form-2-color" class="text-light form-control form-control-color form-control-sm w-75 border border-2 border-success rounded-3 d-inline-block m-2" id="exampleFormControlInput2"></h3>
+                <h1 role="heading" class="text-light text-center pb-3">APOD Search</h1>
+                <h2 role="heading" class="text-light">Name:<input type="text" id="form-1-color" class="text-light form-control form-control-color form-control-sm w-75 border border-2 border-success rounded-3 d-inline-block m-2" id="exampleFormControlInput1" aria-label="Enter Your Name"></h2>
+                <h2 role="heading" class="text-light">Date:<input type="date" id="form-2-color" class="text-light form-control form-control-color form-control-sm w-75 border border-2 border-success rounded-3 d-inline-block m-2" id="exampleFormControlInput2" aria-label="Enter a Date"></h2>
                   <!--Generate Button-->
                   <div class="text-center pt-3">
                     <a href="#generate">
-                      <span id="generate-button-color" class="btn btn-dark border border-2 border-success rounded-3 w-75 p-1 fs-4">Generate!</span>
+                      <span id="generate-button-color" class="btn btn-dark border border-2 border-success rounded-3 w-75 p-1 fs-4" aria-label="Click to generate content">Generate!</span>
                     </a>
                   </div>
               </div>
@@ -55,10 +59,10 @@
           <div id="content" class="row">
             <!--Name, Date & Explanation-->
             <div id="generate" class="col-xl-6">
-              <div id="generated-content-color" class="container border border-3 border-success rounded-4 p-4">
-                <h4 class="text-light fs-4">Name: Titan Seas Reflect Sunlight</h4>
-                <h4 class="text-light fs-4">Date: 2022-03-27</h4>
-                <h4 class="text-light fs-4">Explanation:</h4>
+              <div itemscope itemtype ="https://schema.org/Action" id="generated-content-color" class="container border border-3 border-success rounded-4 p-4">
+                <h3 role="heading" class="text-light fs-4" itemprop="name">Name: Titan Seas Reflect Sunlight</h3>
+                <h3 role="heading" class="text-light fs-4" itemprop="result">Date: 2022-03-27</h3>
+                <h3 role="heading" class="text-light fs-4" itemprop="description">Explanation:</h3>
                 <p class="text-light lh-lg">"Why would the surface of Titan light up with a blinding flash? The reason: a sunglint from liquid seas. Saturn's moon Titan has numerous smooth lakes of methane that, when the angle is right, reflect sunlight as if they were mirrors. Pictured here in false-color, the robotic Cassini spacecraft that orbited Saturn from 2004 to 2017 imaged the cloud-covered Titan in 2014 in different bands of cloud-piercing infrared light. This specular reflection was so bright it saturated one of Cassini's infrared cameras. Although the sunglint was annoying -- it was also useful. The reflecting regions confirm that northern Titan houses a wide and complex array of seas with a geometry that indicates periods of significant evaporation. During its numerous passes of our Solar System's most mysterious moon, Cassini has revealed Titan to be a world with active weather -- including times when it rains a liquefied version of natural gas."</p>
               </div>
             </div>
@@ -72,7 +76,7 @@
                 </div>
                 <div class="text-center">
                   <!--Link Trigger for Modal-->
-                  <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="images/titan-glint-960x960.jpeg" class="w-75" alt="generated image"></a>
+                  <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="images/titan-glint-960x960.jpeg" class="w-75" alt="Small Generated Image/Video"></a>
                 </div>
                   <!-- Modal for displaying large version of image -->
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
@@ -82,8 +86,8 @@
                           <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div id="modal-body-color" class="modal-body">
-                            <img src="images/titan-glint.jpeg" class="w-100" alt="generated image">
-                            <h3 class="text-light m-2 text-center">Titan Seas Reflect Sunlight</h3>
+                            <img src="images/titan-glint.jpeg" class="w-100" alt="Large Generated Image/Video">
+                            <h3 role="heading" class="text-light m-2 text-center">Titan Seas Reflect Sunlight</h3>
                         </div>
                       </div>
                     </div>
@@ -104,8 +108,8 @@
               </div>
               <div class="p-2">
                 <div id="favs-img-color" class="container w-100 p-1 border border-3 border-success rounded-4">
-                  <img src="images/titan-glint.jpeg" class="img-fluid" alt="generated image">
-                  <h3 class="text-light text-center fs-4 m-3">Titan Seas Reflect Sunlight</h3>
+                  <img src="images/titan-glint.jpeg" class="img-fluid" alt="Collection of your favourite Images/Videos">
+                  <h3 role="heading" class="text-light text-center fs-4 m-3">Titan Seas Reflect Sunlight</h3>
                 </div>
                 <!--Arrows-->
                 <div class="text-center m-2">
@@ -116,17 +120,19 @@
               </div>
             </div>
           </div>
+            
             <!--Home Button/Back-to-top-->
             <div class="container text-center">
               <div class="">
-                <a href="#top">
+                <a href="#top" aria-label="Click to go back to the top of the page">
                   <span class="btn text-light"><i class="bi bi-house-door"></i></span>
                 </a>
               </div>
+              
               <!--Footer Info-->
-              <footer>
-                <h5 class="text-light text-center">APOD Search</h5>
-                <h5 class="text-light text-center">&copy; Brennan Whitworth 2023</h5>
+              <footer role="contentinfo">
+                <h4 class="text-light text-center">APOD Search</h4>
+                <h4 class="text-light text-center">&copy; Brennan Whitworth 2023</h4>
               </footer>
             </div>
           </section>

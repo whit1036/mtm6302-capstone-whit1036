@@ -34,13 +34,13 @@ p {
     font-weight: 600;
 }
 
-button, input, span {
+button, input, span, h3 {
     font-family: 'Trispace', sans-serif !important;
     font-weight: 600 !important;
 }
 
 /** sets colors for each container **/
-#favs-button-color, #search-container-color, #generate-button-color, #generated-content-color, #image-preview-color, #modal-body-color, #favourites-color, #favs-img-color {
+#favs-button-color, #form-1-color, #form-2-color, #search-container-color, #generate-button-color, #generated-content-color, #image-preview-color, #modal-body-color, #favourites-color, #favs-img-color {
     background-color: black;
 }
 

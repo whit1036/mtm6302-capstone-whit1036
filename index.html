@@ -36,7 +36,7 @@
             </div>
             
             <!--Name, Date, Generate-->
-            <div>
+            <div role="region">
               <div id="search-container-color" class="container-sm w-100 border border-3 border-success rounded-4 p-4">
                 <h1 role="heading" class="text-light text-center pb-3">APOD Search</h1>
                 <h2 role="heading" class="text-light">Name:<input type="text" id="form-1-color" class="text-light form-control form-control-color form-control-sm w-75 border border-2 border-success rounded-3 d-inline-block m-2" id="exampleFormControlInput1" aria-label="Enter Your Name"></h2>
@@ -56,7 +56,7 @@
        <div class="generated-content-bg">
          <!--APOD Search Generated Content-->
          <section class="p-4 h-100 border border-2 border-light rounded-3">
-          <div id="content" class="row">
+          <div role="region" id="content" class="row">
             <!--Name, Date & Explanation-->
             <div id="generate" class="col-xl-6">
               <div itemscope itemtype ="https://schema.org/Action" id="generated-content-color" class="container border border-3 border-success rounded-4 p-4">
@@ -67,19 +67,19 @@
               </div>
             </div>
             <!--Generated Image Container-->
-            <div class="p-2 col-xl-6">
+            <div role="region" class="p-2 col-xl-6">
               <div id="image-preview-color" class="container border border-3 border-success rounded-4 p-1">
                 <div class="position-relative">
-                  <a href="#favs">
+                  <a href="#favs" aria-label="Click to add to favourites">
                     <span class="btn text-light border border-3 border-success position-absolute bottom-1 end-1 m-2"><i class="bi bi-heart"></i></span>
                   </a>
                 </div>
                 <div class="text-center">
                   <!--Link Trigger for Modal-->
-                  <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="images/titan-glint-960x960.jpeg" class="w-75" alt="Small Generated Image/Video"></a>
+                  <a href="" aria-label="Click to view high quality image/video" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="images/titan-glint-960x960.jpeg" class="w-75" alt="Small Generated Image/Video"></a>
                 </div>
                   <!-- Modal for displaying large version of image -->
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+                  <div role="complementary" class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-xl">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -101,7 +101,7 @@
       <!--User Favourites-->
       <div id="favs" class="user-favourites-bg">
         <section class="p-4 h-100 border border-2 border-light rounded-3">
-          <div id="favourites" class="favourites-container">
+          <div role="region" id="favourites" class="favourites-container">
             <div id="favourites-color" class="container w-100 border border-3 border-success rounded-4 p-4">
               <div class="container p-3 text-center">
                 <button type="button" class="btn text-light border border-2 border-success rounded-4 w-75 p-2 fs-4">Favourites</button>
@@ -113,9 +113,9 @@
                 </div>
                 <!--Arrows-->
                 <div class="text-center m-2">
-                  <button type="button" class="btn text-light fs-1"><i class="bi bi-arrow-left-circle"></i></button>
-                  <button type="button" class="btn text-light fs-1"><i class="bi bi-trash"></i></button>
-                  <button type="button" class="btn text-light fs-1"><i class="bi bi-arrow-right-circle"></i></button>
+                  <button aria-label="Click to go left" type="button" class="btn text-light fs-1"><i class="bi bi-arrow-left-circle"></i></button>
+                  <button aria-label="Click to delete image/video" type="button" class="btn text-light fs-1"><i class="bi bi-trash"></i></button>
+                  <button aria-label="Click to go right" type="button" class="btn text-light fs-1"><i class="bi bi-arrow-right-circle"></i></button>
                 </div>
               </div>
             </div>

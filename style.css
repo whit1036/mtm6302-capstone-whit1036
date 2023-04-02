@@ -118,7 +118,7 @@ button, input, span, h2, h3 {
 
     /** adds a height and background image to the user favourites section **/
     .user-favourites-bg {
-        height: 100vh;
+        height: 100%;
         background-image: url(images/galaxy.jpg);
         background-size: cover;
     }

@@ -82,7 +82,7 @@
                 
                 <div class="text-center">
                   <!--Link Trigger for Modal-->
-                  <a href="" aria-label="Click to view high quality image/video" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="images/titan-glint-960x960.jpeg" class="w-75" alt="Small Generated Image/Video"></a>
+                  <a href="" aria-label="Click to view high quality image/video" data-bs-toggle="modal" data-bs-target="#exampleModal"><div id="imgData"></div></a>
                 </div>
                   
                   <!-- Modal for displaying large version of image -->
@@ -93,8 +93,8 @@
                           <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div id="modal-body-color" class="modal-body">
-                            <img src="images/titan-glint.jpeg" class="w-100" alt="Large Generated Image/Video">
-                            <h3 role="heading" class="text-light m-2 text-center">Titan Seas Reflect Sunlight</h3>
+                            <div id="hdimgData"></div>
+                            <h3 id="modalnameData" role="heading" class="text-light m-2 text-center"></h3>
                         </div>
                       </div>
                     </div>

@@ -1,3 +1,4 @@
+
 // creates a variable to target the generate button
 const $generateButton = document.getElementById('generate-btn')
 

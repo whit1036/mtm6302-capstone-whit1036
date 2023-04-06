@@ -24,6 +24,6 @@ function useAPIData(data) {
     document.getElementById('dateData').innerHTML += data.date
     document.getElementById('nameData').innerHTML += data.title
     document.getElementById('modalnameData').innerHTML += data.title
-    // document.getElementById('imgData').innerHTML += `<img src="${data.url}" class="w-75" alt="Small Generated Image/Video">`
-    // document.getElementById('hdimgData').innerHTML += `<img src="${data.hdurl}" class="w-100" alt="Large Generated Image/Video">`
+    document.getElementById('imgData').innerHTML += `<img src="${data.url}" class="w-75" alt="Small Generated Image/Video">`
+    document.getElementById('hdimgData').innerHTML += `<img src="${data.hdurl}" class="w-100" alt="Large Generated Image/Video">`
 }

@@ -2,6 +2,8 @@
 // creates a variable to target the generate button
 const $generateButton = document.getElementById('generate-btn')
 
+const $chooseDate = document.getElementById('datePicker')
+
 // uses the addEventListener method to create a click function to the generate button
 $generateButton.addEventListener('click', ()=>{
     console.log('button pressed')
@@ -11,7 +13,7 @@ $generateButton.addEventListener('click', ()=>{
 // creates an async function to test, and fetch data from the NASA APOD API
 async function sendApiRequest(){
     let API_KEY = "rBrWOtPUsRcCbdwGdfUbAEbX9h7vDWIHdeyeOmOZ"
-    let response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`);
+    let response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${$chooseDate.value}`);
     console.log(response)
     let data = await response.json()
     console.log(data)

@@ -43,7 +43,7 @@ button, input, span, h2, h3 {
 }
 
 /** sets colors for each container **/
-#favs-button-color, #form-1-color, #form-2-color, #search-container-color, #generate-button-color, #generated-content-color, #image-preview-color, #modal-body-color, #favourites-color, #favs-img-color {
+#favs-button-color, #form-1-color, #search-container-color, #generate-button-color, #generated-content-color, #image-preview-color, #modal-body-color, #favourites-color, #favs-img-color {
     background-color: black;
 }
 

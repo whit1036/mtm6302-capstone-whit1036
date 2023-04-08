@@ -76,7 +76,7 @@
               <div id="image-preview-color" class="container border border-3 border-success rounded-4 p-1">
                 <div class="position-relative">
                   <a href="#favs" aria-label="Click to add to favourites">
-                    <span class="btn text-light border border-3 border-success position-absolute bottom-1 end-1 m-2"><i class="bi bi-heart"></i></span>
+                    <span class="btn text-light border border-3 border-success position-absolute bottom-1 end-1 m-2"><i id="favsimgSave" class="bi bi-heart"></i></span>
                   </a>
                 </div>
                 
@@ -117,12 +117,11 @@
               <!--Images/Videos saved to User Favourites-->
               <div class="p-2">
                 <div id="favs-img-color" class="container w-100 p-1 border border-3 border-success rounded-4">
-                  <img src="images/titan-glint.jpeg" class="img-fluid" alt="Collection of your favourite Images/Videos">
-                  <h3 role="heading" class="text-light text-center fs-4 m-3">Titan Seas Reflect Sunlight</h3>
-                </div>
+              </div>
                 
                 <!--Arrows-->
                 <div class="text-center m-2">
+                  <h3 id="favsimgTitle" role="heading" class="text-light text-center fs-4 m-3"></h3>
                   <button aria-label="Click to go left" type="button" class="btn text-light fs-1"><i class="bi bi-arrow-left-circle"></i></button>
                   <button aria-label="Click to delete image/video" type="button" class="btn text-light fs-1"><i class="bi bi-trash"></i></button>
                   <button aria-label="Click to go right" type="button" class="btn text-light fs-1"><i class="bi bi-arrow-right-circle"></i></button>

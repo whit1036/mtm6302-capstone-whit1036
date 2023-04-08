@@ -4,8 +4,17 @@ const $chooseDate = document.getElementById('datePicker')
 // creates a variable to target the generate button
 const $generateButton = document.getElementById('generate-btn')
 
+// creates a variable to target the favourites button
+const $favsimgButton = document.getElementById('favsimgSave')
+
 // uses the addEventListener method to create a click function to the generate button
 $generateButton.addEventListener('click', ()=>{
+    console.log('button pressed')
+    sendApiRequest()
+})
+
+// uses the addEventListener method to create a click function to the save images to favs button
+$favsimgButton.addEventListener('click', ()=>{
     console.log('button pressed')
     sendApiRequest()
 })
@@ -28,4 +37,6 @@ function useAPIData(data) {
     document.getElementById('modalnameData').innerHTML = data.title
     document.getElementById('imgData').innerHTML = `<img src="${data.url}" class="w-75" alt="Small Generated Image/Video">`
     document.getElementById('hdimgData').innerHTML = `<img src="${data.hdurl}" class="w-100" alt="Large Generated Image/Video">`
+    document.getElementById('favs-img-color').innerHTML = `<img src="${data.hdurl}" class="img-fluid" alt="Collection of your favourite Images/Videos">`
+    document.getElementById('favsimgTitle').innerHTML = data.title
 }

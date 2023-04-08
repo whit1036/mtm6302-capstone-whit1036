@@ -1,9 +1,8 @@
+// creates a variable to target the date picker
+const $chooseDate = document.getElementById('datePicker')
 
 // creates a variable to target the generate button
 const $generateButton = document.getElementById('generate-btn')
-
-// creates a variable to target the date picker
-const $chooseDate = document.getElementById('datePicker')
 
 // uses the addEventListener method to create a click function to the generate button
 $generateButton.addEventListener('click', ()=>{

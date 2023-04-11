@@ -16,7 +16,6 @@ $generateButton.addEventListener('click', ()=>{
 // uses the addEventListener method to create a click function to the save images to favs button
 $favsimgButton.addEventListener('click', ()=>{
     console.log('button pressed')
-    sendApiRequest()
 })
 
 // creates an async function to test, and fetch data from the NASA APOD API

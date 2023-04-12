@@ -4,6 +4,17 @@ const $chooseDate = document.getElementById('datePicker')
 // creates a variable to target the generate button
 const $generateButton = document.getElementById('generate-btn')
 
+// // saves the whole object from the api in an object array
+// const apodObject = data[0]
+
+// // saves the array in localStorage using stringify
+// const jsonArray = JSON.stringify(apodObject)
+// localStorage.setItem('array', jsonArray)
+
+// // retrives array, uses parse method to get object data back
+// const storage = localStorage.getItem('array')
+// const parseArray = JSON.parse(storage)
+
 // creates a variable to target the favourites button
 const $favsimgButton = document.getElementById('favsimgSave')
 

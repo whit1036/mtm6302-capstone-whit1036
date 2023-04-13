@@ -4,19 +4,19 @@ const $chooseDate = document.getElementById('datePicker')
 // creates a variable to target the generate button
 const $generateButton = document.getElementById('generate-btn')
 
-// // saves the whole object from the api in an object array
-// const apodObject = data[0]
+// saves the whole object from the api in an object array
+const apodObject = data[0]
 
-// // saves the array in localStorage using stringify
-// const jsonArray = JSON.stringify(apodObject)
-// localStorage.setItem('array', jsonArray)
+// saves the array in localStorage using stringify
+const jsonArray = JSON.stringify(apodObject)
+localStorage.setItem('array', jsonArray)
 
-// // retrives array, uses parse method to get object data back
-// const storage = localStorage.getItem('array')
-// const parseArray = JSON.parse(storage)
+// retrives array, uses parse method to get object data back
+const storage = localStorage.getItem('array')
+const parseArray = JSON.parse(storage)
 
-// document.getElementById('favs-img-color').innerHTML = `<img src="${data.url}" class="img-fluid" alt="Collection of your favourite Images/Videos">`
-// document.getElementById('favsimgTitle').innerHTML = data.title
+document.getElementById('favs-img-color').innerHTML = `<img src="${data.url}" class="img-fluid" alt="Collection of your favourite Images/Videos">`
+document.getElementById('favsimgTitle').innerHTML = data.title
 
 // creates a variable to target the favourites button
 const $favsimgButton = document.getElementById('favsimgSave')

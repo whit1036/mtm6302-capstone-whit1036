@@ -4,33 +4,21 @@ const $chooseDate = document.getElementById('datePicker')
 // creates a variable to target the generate button
 const $generateButton = document.getElementById('generate-btn')
 
-// saves the whole object from the api in an object array
-const apodObject = data[0]
-
-// saves the array in localStorage using stringify
-const jsonArray = JSON.stringify(apodObject)
-localStorage.setItem('array', jsonArray)
-
-// retrives array, uses parse method to get object data back
-const storage = localStorage.getItem('array')
-const parseArray = JSON.parse(storage)
-
-document.getElementById('favs-img-color').innerHTML = `<img src="${data.url}" class="img-fluid" alt="Collection of your favourite Images/Videos">`
-document.getElementById('favsimgTitle').innerHTML = data.title
-
-// creates a variable to target the favourites button
-const $favsimgButton = document.getElementById('favsimgSave')
-
 // uses the addEventListener method to create a click function to the generate button
 $generateButton.addEventListener('click', ()=>{
     console.log('button pressed')
     sendApiRequest($chooseDate.value)
 })
 
-// uses the addEventListener method to create a click function to the save images to favs button
-$favsimgButton.addEventListener('click', ()=>{
-    console.log('button pressed')
-})
+// // retrives array, uses parse method to get object data back
+const storage = localStorage.getItem('array')
+const parseArray = []
+
+// uses for loop to loop through api object array
+for (let i = 0; i < parseArray.length; i++) {
+    const apodimgData = parseArray[i]
+    console.log(apodimgData)
+}
 
 // creates an async function to test, and fetch data from the NASA APOD API
 async function sendApiRequest(date){
@@ -40,6 +28,17 @@ async function sendApiRequest(date){
     let data = await response.json()
     console.log(data)
     useAPIData(data)
+
+    // uses the addEventListener method and if statement to create a click function to the save images to local storage
+    const $favsimgButton = document.getElementById('favsimgSave')
+    if ($favsimgButton) {
+        $favsimgButton.addEventListener('click', ()=>{
+            console.log('button pressed')
+            parseArray.push(data)
+            const jsonArray = JSON.stringify(parseArray)
+            localStorage.setItem('array', jsonArray)
+        })
+    }
 }
 
 // Call the API with no date value to display today's picture

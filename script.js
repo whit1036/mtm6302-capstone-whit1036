@@ -11,8 +11,11 @@ $generateButton.addEventListener('click', ()=>{
 })
 
 // // retrives array, uses parse method to get object data back
-const storage = localStorage.getItem('array')
-const parseArray = JSON.parse(storage)
+const lclstrg = localStorage.getItem('array')
+const parseArray = []
+if (lclstrg) {
+    let parseArray = JSON.parse(lclstrg)
+}
 
 // uses for loop to loop through api object array
 for (let i = 0; i < parseArray.length; i++) {
@@ -37,23 +40,13 @@ async function sendApiRequest(date){
             parseArray.push(data)
             const jsonArray = JSON.stringify(parseArray)
             localStorage.setItem('array', jsonArray)
-            // creates a variable to return the previous element of the array using the pop method
-            const favimgObject = parseArray.pop()
-            document.getElementById('favs-img-color').innerHTML = `<img src="${favimgObject.url}" class="img-fluid" alt="Collection of your favourite Images/Videos">`
-            document.getElementById('favsimgTitle').innerHTML = favimgObject.title
+            // creates a variable to return the previous element of the array using the pop method, saves to local storage
+            const favimgObj = parseArray.pop()
+            document.getElementById('favs-img-color').innerHTML = `<img src="${favimgObj.url}" class="img-fluid" alt="Collection of your favourite Images/Videos">`
+            document.getElementById('favsimgTitle').innerHTML = favimgObj.title
+            localStorage.setItem('favimgObj', JSON.stringify(favimgObj))
         })
     }
-
-    // const $favsrightBtn = document.getElementById('right-btn')
-    // const $storeUrl = []
-    
-
-    // const $favsleftBtn = document.getElementById('left-btn')
-    // if ($favsleftBtn) {
-    //     $favsleftBtn.addEventListener('click', ()=>{
-    //         console.log('buttton pressed')
-    //     })
-    // }
 }
 
 // Call the API with no date value to display today's picture

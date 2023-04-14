@@ -11,3 +11,4 @@ You can find a list of resouces & references I used to complete this assignment 
 * [How to Use NASA APIs](https://wilsjame.github.io/how-to-nasa/)
 * [JS Fetch API using NASA APOD API](https://sophiali.dev/javascript-fetch-api-with-nasa-api)
 * [JavaScript Array of Objects Tutorial](https://www.freecodecamp.org/news/javascript-array-of-objects-tutorial-how-to-create-update-and-loop-through-objects-using-js-array-methods/)
+* [Total Length of Array](https://stackoverflow.com/questions/36973547/subtract-and-get-a-clean-number-from-the-total-length-of-the-array-javascript)

@@ -37,21 +37,8 @@ async function sendApiRequest(date){
             parseArray.push(data)
             const jsonArray = JSON.stringify(parseArray)
             localStorage.setItem('array', jsonArray)
-            document.getElementById('favs-img-color').innerHTML = `<img src="${parseArray[0].url}" class="img-fluid" alt="Collection of your favourite Images/Videos">`
-            document.getElementById('favsimgTitle').innerHTML = parseArray[0].title
         })
     }
-
-    // const $favsrightBtn = document.getElementById('right-btn')
-    // const $storeUrl = []
-    
-
-    // const $favsleftBtn = document.getElementById('left-btn')
-    // if ($favsleftBtn) {
-    //     $favsleftBtn.addEventListener('click', ()=>{
-    //         console.log('buttton pressed')
-    //     })
-    // }
 }
 
 // Call the API with no date value to display today's picture

@@ -12,7 +12,7 @@ $generateButton.addEventListener('click', ()=>{
 
 // // retrives array, uses parse method to get object data back
 const lclstrg = localStorage.getItem('array')
-let parseArray = []
+const parseArray = []
 if (lclstrg) {
     let parseArray = JSON.parse(lclstrg)
 }

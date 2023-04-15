@@ -53,6 +53,14 @@ async function sendApiRequest(date){
     if ($rightBtn) {
         $rightBtn.addEventListener('click', ()=>{
             console.log('button pressed')
+            parseArray.push(data)
+            const jsonArray = JSON.stringify(parseArray)
+            localStorage.setItem('array', jsonArray)
+            // creates a variable to return the previous element of the array using the pop method, saves to local storage
+            let favimgObj = parseArray.pop()
+            document.getElementById('favs-img-color').innerHTML = `<img src="${favimgObj.url}" class="img-fluid" alt="Collection of your favourite Images/Videos">`
+            document.getElementById('favsimgTitle').innerHTML = favimgObj.title
+            localStorage.setItem('favimgObj', JSON.stringify(favimgObj))
         })
     }
 
@@ -61,6 +69,14 @@ async function sendApiRequest(date){
     if ($leftBtn) {
         $leftBtn.addEventListener('click', ()=>{
             console.log('button pressed')
+            parseArray.push(data)
+            const jsonArray = JSON.stringify(parseArray)
+            localStorage.setItem('array', jsonArray)
+            // creates a variable to return the previous element of the array using the pop method, saves to local storage
+            let favimgObj = parseArray.push()
+            document.getElementById('favs-img-color').innerHTML = `<img src="${favimgObj.url}" class="img-fluid" alt="Collection of your favourite Images/Videos">`
+            document.getElementById('favsimgTitle').innerHTML = favimgObj.title
+            localStorage.setItem('favimgObj', JSON.stringify(favimgObj))
         })
     }
 

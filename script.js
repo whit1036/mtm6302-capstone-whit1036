@@ -47,6 +47,30 @@ async function sendApiRequest(date){
             localStorage.setItem('favimgObj', JSON.stringify(favimgObj))
         })
     }
+
+    // uses the addEventListener method and if statement to create a click funtion that displays the next image saved
+    const $rightBtn = document.getElementById('right-btn')
+    if ($rightBtn) {
+        $rightBtn.addEventListener('click', ()=>{
+            console.log('button pressed')
+        })
+    }
+
+    // used the addEventListener method and if statement to create a click function that displays the last image saved
+    const $leftBtn = document.getElementById('left-btn')
+    if ($leftBtn) {
+        $leftBtn.addEventListener('click', ()=>{
+            console.log('button pressed')
+        })
+    }
+
+    // uses the addEventListener method and if statement to create a click function that deleted the image from local storage
+    const $trashBtn = document.getElementById('trash-btn')
+    if ($trashBtn) {
+        $trashBtn.addEventListener('click', ()=>{
+            console.log('button pressed')
+        })
+    }
 }
 
 // Call the API with no date value to display today's picture

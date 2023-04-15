@@ -12,7 +12,7 @@ $generateButton.addEventListener('click', ()=>{
 
 // // retrives array, uses parse method to get object data back
 const lclstrg = localStorage.getItem('array')
-const parseArray = []
+let parseArray = []
 if (lclstrg) {
     let parseArray = JSON.parse(lclstrg)
 }
@@ -57,7 +57,7 @@ async function sendApiRequest(date){
             const jsonArray = JSON.stringify(parseArray)
             localStorage.setItem('array', jsonArray)
             // creates a variable to return the previous element of the array using the pop method, saves to local storage
-            let favimgObj = parseArray.pop()
+            const favimgObj = parseArray.pop()
             document.getElementById('favs-img-color').innerHTML = `<img src="${favimgObj.url}" class="img-fluid" alt="Collection of your favourite Images/Videos">`
             document.getElementById('favsimgTitle').innerHTML = favimgObj.title
             localStorage.setItem('favimgObj', JSON.stringify(favimgObj))
@@ -69,11 +69,11 @@ async function sendApiRequest(date){
     if ($leftBtn) {
         $leftBtn.addEventListener('click', ()=>{
             console.log('button pressed')
-            parseArray.push(data)
+            parseArray.pop()
             const jsonArray = JSON.stringify(parseArray)
             localStorage.setItem('array', jsonArray)
             // creates a variable to return the previous element of the array using the pop method, saves to local storage
-            let favimgObj = parseArray.push()
+            const favimgObj = parseArray.push()
             document.getElementById('favs-img-color').innerHTML = `<img src="${favimgObj.url}" class="img-fluid" alt="Collection of your favourite Images/Videos">`
             document.getElementById('favsimgTitle').innerHTML = favimgObj.title
             localStorage.setItem('favimgObj', JSON.stringify(favimgObj))

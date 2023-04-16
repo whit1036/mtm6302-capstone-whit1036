@@ -11,16 +11,16 @@ $generateButton.addEventListener('click', ()=>{
 })
 
 // // retrives array, uses parse method to get object data back
-const lclstrg = localStorage.getItem('array')
-const parseArray = []
-if (lclstrg) {
-    let parseArray = JSON.parse(lclstrg)
+const lclstorage = localStorage.getItem('array')
+const prseArray = []
+if (lclstorage) {
+    let prseArray = JSON.parse(lclstorage)
 }
 
 // uses for loop to loop through api object array
-for (let i = 0; i < parseArray.length; i++) {
-    const apodimgData = parseArray[i]
-    console.log(apodimgData)
+for (let i = 0; i < prseArray.length; i++) {
+    const nasaimgData = prseArray[i]
+    console.log(nasaimgData)
 }
 
 // creates an async function to test, and fetch data from the NASA APOD API
@@ -37,11 +37,11 @@ async function sendApiRequest(date){
     if ($favsimgButton) {
         $favsimgButton.addEventListener('click', ()=>{
             console.log('button pressed')
-            parseArray.push(data)
-            const jsonArray = JSON.stringify(parseArray)
+            prseArray.push(data)
+            const jsonArray = JSON.stringify(prseArray)
             localStorage.setItem('array', jsonArray)
             // creates a variable to return the previous element of the array using the pop method, saves to local storage
-            const favimgObj = parseArray.pop()
+            const favimgObj = prseArray.pop()
             document.getElementById('favs-img-color').innerHTML = `<img src="${favimgObj.url}" class="img-fluid" alt="Collection of your favourite Images/Videos">`
             document.getElementById('favsimgTitle').innerHTML = favimgObj.title
             localStorage.setItem('favimgObj', JSON.stringify(favimgObj))

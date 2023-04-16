@@ -11,10 +11,10 @@ $generateButton.addEventListener('click', ()=>{
 })
 
 // // retrives array, uses parse method to get object data back
-const lclstorage = localStorage.getItem('array')
+const getobjData = localStorage.getItem('array')
 const prseArray = []
-if (lclstorage) {
-    let prseArray = JSON.parse(lclstorage)
+if (getobjData) {
+    let prseArray = JSON.parse(getobjData)
 }
 
 // uses for loop to loop through api object array

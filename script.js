@@ -48,26 +48,26 @@ async function sendApiRequest(date){
         })
     }
 
-    // const $rightBtn = document.getElementById('right-btn')
-    // if ($rightBtn) {
-    //     $rightBtn.addEventListener('click', ()=>{
-    //         console.log('button pressed')
-    //     })
-    // }
+    const $rightBtn = document.getElementById('right-btn')
+    if ($rightBtn) {
+        $rightBtn.addEventListener('click', ()=>{
+            console.log('button pressed')
+        })
+    }
 
-    // const $leftBtn = document.getElementById('left-btn')
-    // if ($leftBtn) {
-    //     $leftBtn.addEventListener('click', ()=>{
-    //         console.log('button pressed')
-    //     })
-    // }
+    const $leftBtn = document.getElementById('left-btn')
+    if ($leftBtn) {
+        $leftBtn.addEventListener('click', ()=>{
+            console.log('button pressed')
+        })
+    }
 
-    // const $trashBtn = document.getElementById('trash-btn')
-    // if ($trashBtn) {
-    //     $trashBtn.addEventListener('click', ()=>{
-    //         console.log('button pressed')
-    //     })
-    // }
+    const $trashBtn = document.getElementById('trash-btn')
+    if ($trashBtn) {
+        $trashBtn.addEventListener('click', ()=>{
+            console.log('button pressed')
+        })
+    }
 }
 
 // Call the API with no date value to display today's picture

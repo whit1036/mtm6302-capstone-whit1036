@@ -17,12 +17,6 @@ if (getobjData) {
     let prseArray = JSON.parse(getobjData)
 }
 
-// uses for loop to loop through api object array
-for (let i = 0; i < prseArray.length; i++) {
-    const nasaimgData = prseArray[i]
-    console.log(nasaimgData)
-}
-
 // creates an async function to fetch data from the NASA APOD API
 async function sendApiRequest(date){
     let API_KEY = "rBrWOtPUsRcCbdwGdfUbAEbX9h7vDWIHdeyeOmOZ"
@@ -32,7 +26,7 @@ async function sendApiRequest(date){
     console.log(data)
     useAPIData(data)
 
-    // uses the addEventListener method and if statement to create a click function to the save images to local storage
+    // uses the addEventListener method and if statement to create a click function to the save display images in favourites section, and save image data to local storage
     const $favsimgButton = document.getElementById('favsimgSave')
     if ($favsimgButton) {
         $favsimgButton.addEventListener('click', ()=>{
@@ -62,12 +56,12 @@ async function sendApiRequest(date){
         })
     }
 
-    const $trashBtn = document.getElementById('trash-btn')
-    if ($trashBtn) {
-        $trashBtn.addEventListener('click', ()=>{
-            console.log('button pressed')
-        })
-    }
+    // const $trashBtn = document.getElementById('trash-btn')
+    // if ($trashBtn) {
+    //     $trashBtn.addEventListener('click', ()=>{
+    //         console.log('button pressed')
+    //     })
+    // }
 }
 
 // Call the API with no date value to display today's picture

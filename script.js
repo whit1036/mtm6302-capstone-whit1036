@@ -48,45 +48,26 @@ async function sendApiRequest(date){
         })
     }
 
-    // uses the addEventListener method and if statement to create a click funtion that displays the next image saved
-    const $rightBtn = document.getElementById('right-btn')
-    if ($rightBtn) {
-        $rightBtn.addEventListener('click', ()=>{
-            console.log('button pressed')
-            parseArray.push(data)
-            const jsonArray = JSON.stringify(parseArray)
-            localStorage.setItem('array', jsonArray)
-            // creates a variable to return the previous element of the array using the pop method, saves to local storage
-            const favimgObj = parseArray.pop()
-            document.getElementById('favs-img-color').innerHTML = `<img src="${favimgObj.url}" class="img-fluid" alt="Collection of your favourite Images/Videos">`
-            document.getElementById('favsimgTitle').innerHTML = favimgObj.title
-            localStorage.setItem('favimgObj', JSON.stringify(favimgObj))
-        })
-    }
+    // const $rightBtn = document.getElementById('right-btn')
+    // if ($rightBtn) {
+    //     $rightBtn.addEventListener('click', ()=>{
+    //         console.log('button pressed')
+    //     })
+    // }
 
-    // used the addEventListener method and if statement to create a click function that displays the last image saved
-    const $leftBtn = document.getElementById('left-btn')
-    if ($leftBtn) {
-        $leftBtn.addEventListener('click', ()=>{
-            console.log('button pressed')
-            parseArray.pop()
-            const jsonArray = JSON.stringify(parseArray)
-            localStorage.setItem('array', jsonArray)
-            // creates a variable to return the previous element of the array using the pop method, saves to local storage
-            const favimgObj = parseArray.push()
-            document.getElementById('favs-img-color').innerHTML = `<img src="${favimgObj.url}" class="img-fluid" alt="Collection of your favourite Images/Videos">`
-            document.getElementById('favsimgTitle').innerHTML = favimgObj.title
-            localStorage.setItem('favimgObj', JSON.stringify(favimgObj))
-        })
-    }
+    // const $leftBtn = document.getElementById('left-btn')
+    // if ($leftBtn) {
+    //     $leftBtn.addEventListener('click', ()=>{
+    //         console.log('button pressed')
+    //     })
+    // }
 
-    // uses the addEventListener method and if statement to create a click function that deleted the image from local storage
-    const $trashBtn = document.getElementById('trash-btn')
-    if ($trashBtn) {
-        $trashBtn.addEventListener('click', ()=>{
-            console.log('button pressed')
-        })
-    }
+    // const $trashBtn = document.getElementById('trash-btn')
+    // if ($trashBtn) {
+    //     $trashBtn.addEventListener('click', ()=>{
+    //         console.log('button pressed')
+    //     })
+    // }
 }
 
 // Call the API with no date value to display today's picture

@@ -10,7 +10,7 @@ $generateButton.addEventListener('click', ()=>{
     sendApiRequest($chooseDate.value)
 })
 
-// // retrives array, uses parse method to get object data back
+// // retrives array, uses parse method to get object data back from the api
 const getobjData = localStorage.getItem('array')
 const prseArray = []
 if (getobjData) {
@@ -23,7 +23,7 @@ for (let i = 0; i < prseArray.length; i++) {
     console.log(nasaimgData)
 }
 
-// creates an async function to test, and fetch data from the NASA APOD API
+// creates an async function to fetch data from the NASA APOD API
 async function sendApiRequest(date){
     let API_KEY = "rBrWOtPUsRcCbdwGdfUbAEbX9h7vDWIHdeyeOmOZ"
     let response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${date}`);

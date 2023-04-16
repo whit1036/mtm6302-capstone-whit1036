@@ -10,7 +10,7 @@ $generateButton.addEventListener('click', ()=>{
     sendApiRequest($chooseDate.value)
 })
 
-// // retrives array, uses parse method to get object data back from the api
+// retrives array, uses parse method to get object data back from the api
 const getobjData = localStorage.getItem('array')
 const prseArray = []
 if (getobjData) {
@@ -26,22 +26,33 @@ async function sendApiRequest(date){
     console.log(data)
     useAPIData(data)
 
-    // uses the addEventListener method and if statement to create a click function to the save display images in favourites section, and save image data to local storage
+    // uses the addEventListener method and if statement to create a click function to save image data to local storage & favourites
     const $favsimgButton = document.getElementById('favsimgSave')
     if ($favsimgButton) {
         $favsimgButton.addEventListener('click', ()=>{
-            console.log('button pressed')
+            // pushes data from api object array, uses stringify to turn the object property into a string
             prseArray.push(data)
             const jsonArray = JSON.stringify(prseArray)
             localStorage.setItem('array', jsonArray)
-            // creates a variable to return the previous element of the array using the pop method, saves to local storage
-            const favimgObj = prseArray.pop()
-            document.getElementById('favs-img-color').innerHTML = `<img src="${favimgObj.url}" class="img-fluid" alt="Collection of your favourite Images/Videos">`
-            document.getElementById('favsimgTitle').innerHTML = favimgObj.title
-            localStorage.setItem('favimgObj', JSON.stringify(favimgObj))
+            
+            // creates an array to store saved image data
+            const favImages = []
+            // retreives url image data property
+            const favimgObj = data.url
+            
+            // creates an array to store saved image title data
+            const favimgTitle = []
+            // retreives title image data property
+            const favtitleObj = data.title
+            
+            // outputs the image user wants to save to favourites to console
+            console.log('Image was saved to favourites: ' + data.url)
+            console.log('Title was saved to favourites: ' + data.title)
+
         })
     }
 
+    // uses addEventListener to target the click function for the right button
     const $rightBtn = document.getElementById('right-btn')
     if ($rightBtn) {
         $rightBtn.addEventListener('click', ()=>{
@@ -49,6 +60,7 @@ async function sendApiRequest(date){
         })
     }
 
+    // uses addEventListener to target the click function for the left button
     const $leftBtn = document.getElementById('left-btn')
     if ($leftBtn) {
         $leftBtn.addEventListener('click', ()=>{
@@ -56,12 +68,13 @@ async function sendApiRequest(date){
         })
     }
 
-    // const $trashBtn = document.getElementById('trash-btn')
-    // if ($trashBtn) {
-    //     $trashBtn.addEventListener('click', ()=>{
-    //         console.log('button pressed')
-    //     })
-    // }
+    // uses addEventListener to target the click function for the trash button
+    const $trashBtn = document.getElementById('trash-btn')
+    if ($trashBtn) {
+        $trashBtn.addEventListener('click', ()=>{
+            console.log('button pressed')
+        })
+    }
 }
 
 // Call the API with no date value to display today's picture

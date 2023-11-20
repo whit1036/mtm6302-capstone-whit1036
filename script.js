@@ -44,7 +44,7 @@ async function sendApiRequest(date) {
                         <div id="ImgFavImg"><img class="w-100" src="${el.url}" alt=""></div>
                         <h3 id="imgFavTitle" class="text-light fs-4 mt-3 text-center"> ${el.title}</h3>
                         <div class="text-center">
-                            <button  class="trash-btn" aria-label="Click to delete image/video" type="button" class="btn text-light fs-1"><i data-id="${el.date}" class="bi bi-trash"></i></button>
+                            <button class="btn trash-btn text-light" aria-label="Click to delete image/video" type="button" class="btn text-light fs-1"><i class="bi bi-trash"></i></button>
                         </div>
                     </div>`
     );
@@ -56,6 +56,7 @@ async function sendApiRequest(date) {
     deleteToggle.forEach((obj) =>
       obj.addEventListener("click", (e) => deleteItem(e.target.dataset.id))
     );
+
   };
   // ==========output local storage data==================
   //   step-1  create empty array
@@ -73,6 +74,20 @@ async function sendApiRequest(date) {
     const jsonArray = JSON.stringify(favImages);
     localStorage.setItem("favArray", jsonArray);
   });
+
+  // Delete function to get rid of image in favImages array
+  function deleteItem(imgIndex) {
+      
+      // uses splice method to get rid of theimage saved to favourites
+      favImages.splice(imgIndex, 1)
+  
+      // pushes data from api object array, uses stringify to turn the object property into a string
+      const jsonArray = JSON.stringify(favImages);
+      localStorage.setItem("favArray", jsonArray);
+  
+      // prints image to page and local storage
+      printHTML();
+    }
 }
 
 // ==========should use class instead of ID otherwise it only target one object ============================
